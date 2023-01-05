@@ -1,0 +1,72 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "MuleCapabilityStatement",
+  "url": "http://fhir.mulesoft.com/CapabilityStatement/MuleCapabilityStatement",
+  "name": "Mule Exampe Capability Statement",
+  "status": "draft",
+  "date": "2022-12-23",
+  "publisher": "MuleSoft",
+  "kind": "instance",
+  "software": {
+    "name": "FHIR API test"
+  },
+  "implementation": {
+    "description": "Mule Test OpenAPI spec"
+  },
+  "fhirVersion": "4.0.1",
+  "format": [
+    "json"
+  ],
+  "implementationGuide": [
+    "http://hl7.org/fhir/us/lab"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "documentation": "Mulesoft test implementation of FHIR IG",
+      "security": {
+        "cors": true,
+        "service": [
+          {
+            "coding": [
+              {
+                "code": "OAuth",
+                "system": "http://hl7.org/fhir/restful-security-service"
+              }
+            ]
+          }
+        ]
+      },
+      "resource": [
+        {
+          "type": "Patient",
+          "supportedProfile": [
+            "http://hl7.org.nz/fhir/StructureDefinition/NzPatient"
+          ],
+          "interaction": [
+            {
+              "code": "read",
+              "documentation": "Only supports basic read for patients."
+            }
+          ],
+          "searchParam": [
+            {
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/SearchParameter/Patient-identifier",
+              "type": "token",
+              "documentation": "Only supports search by institution MRN"
+            }
+          ]
+        }
+      ],
+      "interaction": [
+        {
+          "code": "transaction"
+        }
+      ],
+      "compartment": [
+        "http://hl7.org/fhir/CompartmentDefinition/patient"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "fhir.mulesoft",
+  "url": "http://fhir.mulesoft.com/ImplementationGuide/fhir.mulesoft",
+  "version": "0.1.0",
+  "name": "MaxMule",
+  "title": "A test implementation guide authored to illustarate basic capabilities to understand role of FHIR tooling in API specification tooling",
+  "status": "draft",
+  "publisher": "Tobias Huegle MuleSoft",
+  "contact": [
+    {
+      "name": "Tobias Huegle MuleSoft",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://fhir.mulesoft.com"
+        }
+      ]
+    }
+  ],
+  "description": "This is an example created by Tobias Huegle to assist in exoploring native FHIR open source community tooling for MuleSoft",
+  "packageId": "fhir.mulesoft",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/MulePatient"
+        },
+        "name": "MulePatient",
+        "description": "An example profile of the Patient resource.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/123456"
+        },
+        "name": "PatientExample",
+        "description": "An example instance of a patient.",
+        "exampleCanonical": "http://fhir.mulesoft.com/StructureDefinition/MulePatient"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MuleCapabilityStatement"
+        },
+        "name": "MuleCapabilityStatement",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2022+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}

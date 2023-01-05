@@ -1,0 +1,27 @@
+{
+  "resourceType": "Patient",
+  "id": "123456",
+  "meta": {
+    "profile": [
+      "http://fhir.mulesoft.com/StructureDefinition/MulePatient"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "test",
+      "value": "12345"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "James"
+      ],
+      "family": "Pond"
+    }
+  ],
+  "active": true,
+  "gender": "male",
+  "birthDate": "2000-10-10"
+}
